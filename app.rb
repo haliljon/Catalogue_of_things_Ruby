@@ -11,8 +11,8 @@ require_relative 'movie/source'
 
 class App
   # def initialize
-    # @labels = load_data('./data/labels.json')
-    # @books = load_data('./data/books.json')
+  # @labels = load_data('./data/labels.json')
+  # @books = load_data('./data/books.json')
   #   @music_albums = load_data('./data/music_albums.json')
   #   @genres = load_data('./data/genres.json')
   #   @games = load_data('./data/games.json')
@@ -46,7 +46,7 @@ class App
       puts 'There are no music albums in the catalogue'
     else
       puts 'Music Albums 🎶'
-      music_albums.each_with_index do |music_album, index| 
+      music_albums.each_with_index do |music_album, index|
         puts "#{index}. On spotify: #{music_album['on_spotify']}, Publish Date: #{music_album['publish_date']}, Archived: #{music_album['archived']}"
       end
     end
@@ -143,15 +143,15 @@ class App
   end
 
   def add_music_album
-    on_spotify=get_user_input_str('Is this music album on spotify? [Y/N]')
-    on_spotify.upcase == 'Y' ? on_spotify = true : on_spotify = false
+    on_spotify = get_user_input_str('Is this music album on spotify? [Y/N]')
+    on_spotify = on_spotify.upcase == 'Y'
     publish_date = get_user_input_str('Enter the publish date')
     genre = get_user_input_str('Enter the genre')
     music_album = MusicAlbum.new(nil, publish_date, nil, on_spotify, genre)
     genre = Genre.new(genre)
     music_album_item = music_album
     genre.add_item(music_album_item)
-    genres=load_data('./data/genres.json')
+    genres = load_data('./data/genres.json')
     genres << genre
     save_data(genres, 'data/genres.json')
     puts 'Genre added successfully'
@@ -163,7 +163,7 @@ class App
 
   def add_movie
     silet = get_user_input_str('Is this movie silet? [Y/N]')
-    silet.upcase == 'Y' ? silet = true : silet = false
+    silet = silet.upcase == 'Y'
     publish_date = get_user_input_str('Enter the publish date')
     source = get_user_input_str('Enter the source')
     movie = Movie.new(nil, publish_date, nil, silet, source)
@@ -194,7 +194,7 @@ class App
     authors << author
     save_data(authors, 'data/authors.json')
     puts 'Author added successfully'
-    games=load_data('./data/games.json')
+    games = load_data('./data/games.json')
     games << game
     save_data(games, 'data/games.json')
     puts 'Game added successfully'
