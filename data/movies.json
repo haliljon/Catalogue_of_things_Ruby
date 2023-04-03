@@ -1,14 +1,8 @@
 [
   {
-    "publish_date": "2015-06-29",
-    "archived": true,
-    "silet": "y",
-    "source": "newspaper"
-  },
-  {
-    "publish_date": "1998-05-23",
+    "publish_date": "1995-08-13",
     "archived": false,
-    "silet": "n",
+    "silet": true,
     "source": "TV"
   }
 ]

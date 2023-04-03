@@ -1,8 +1,8 @@
 class Genre
 
     def initialize(name)
-        @name = name
         @id = Random.rand(1..1000)
+        @name = name
         @items = []
     end
 
@@ -12,9 +12,9 @@ class Genre
 
     def to_json(*args)
         {
-            id: @id,
-            name: @name,
-            items: @items
+            'id' => @id,
+            'name' => @name,
+            'items' => @items
         }.to_json(*args)
     end
 end

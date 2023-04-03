@@ -1,56 +1,15 @@
 [
   {
-    "title": "1950",
-    "color": "orange",
-    "items": [
-      {
-        "publish_date": "2012-05-36",
-        "publisher": "gdfg",
-        "cover_state": "good"
-      }
-    ]
-  },
-  {
-    "title": "Animal farm",
-    "color": "green",
-    "items": [
-      {
-        "publish_date": "2022-12-03",
-        "publisher": "NY times",
-        "cover_state": "bad"
-      }
-    ]
-  },
-  {
-    "title": "1984",
-    "color": "red",
-    "items": [
-      {
-        "publish_date": "2022-04-29",
-        "publisher": "SF times",
-        "cover_state": "good"
-      }
-    ]
-  },
-  {
-    "title": "Futura",
+    "id": 826,
+    "title": "Don't be sad",
     "color": "grey",
     "items": [
       {
-        "publish_date": "2017-05-13",
-        "publisher": "Sf times",
+        "id": 159,
+        "publish_date": "1998-02-19",
+        "archived": false,
+        "publisher": "Karni",
         "cover_state": "good"
-      }
-    ]
-  },
-  {
-    "title": "tsgs",
-    "color": "gdfg",
-    "items": [
-      {
-        "publish_date": "2022-12-05",
-        "publisher": "dasd",
-        "cover_state": "bad"
       }
     ]
   }

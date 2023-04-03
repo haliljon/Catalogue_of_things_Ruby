@@ -2,13 +2,13 @@ require_relative '../item'
 
 class Game < Item
     attr_reader :id, :publish_date, :archived
-    attr_accessor :multiplayer, :last_played_at, :author
+    attr_accessor :multiplayer, :last_played_at
 
-    def initialize(id, publish_date, archived, multiplayer, last_played_at, author)
+    def initialize(id, publish_date, archived, multiplayer, last_played_at)
         super(id, publish_date, archived: archived)
         @multiplayer = multiplayer
         @last_played_at = last_played_at
-        @author = author
+        # @author = author
     end
 
     def can_be_archived?
@@ -21,7 +21,7 @@ class Game < Item
             'archived' => @archived,
             'multiplayer' => @multiplayer,
             'last_played_at' => @last_played_at,
-            'author' => @author
+            # 'author' => @author
         }.to_json(*args)
     end
 end

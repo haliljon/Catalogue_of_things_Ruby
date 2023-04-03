@@ -35,7 +35,7 @@ class App
       puts 'There are no books in the catalogue'
     else
       books.each_with_index do |book, index|
-        puts "#{index} Publisher: #{book['publisher']}, Publish Date: #{book['publish_date']}, Cover State: #{book['cover_state']}, Archived: #{book['archived']}, Label: #{book['label']}"
+        puts "#{index} Publisher: #{book['publisher']}, Publish Date: #{book['publish_date']}, Cover State: #{book['cover_state']}, Archived: #{book['archived']}"
       end
     end
   end
@@ -128,8 +128,8 @@ class App
     puts 'Choose a label for this book'
     title = get_user_input_str('Enter the label title')
     color = get_user_input_str('Enter the label color')
+    book = Book.new(nil, publish_date, nil, publisher, cover_state)
     label = Label.new(title, color)
-    book = Book.new(nil, publish_date, nil, publisher, cover_state, label)
     book_item = book
     label.add_item(book_item)
     labels = load_data('./data/labels.json')
@@ -144,10 +144,11 @@ class App
 
   def add_music_album
     on_spotify=get_user_input_str('Is this music album on spotify? [Y/N]')
+    on_spotify.upcase == 'Y' ? on_spotify = true : on_spotify = false
     publish_date = get_user_input_str('Enter the publish date')
-    name = get_user_input_str('Enter the genre')
-    music_album = MusicAlbum.new(nil, publish_date, nil, on_spotify, name)
-    genre = Genre.new(name)
+    genre = get_user_input_str('Enter the genre')
+    music_album = MusicAlbum.new(nil, publish_date, nil, on_spotify, genre)
+    genre = Genre.new(genre)
     music_album_item = music_album
     genre.add_item(music_album_item)
     genres=load_data('./data/genres.json')
@@ -156,12 +157,13 @@ class App
     puts 'Genre added successfully'
     music_albums = load_data('./data/music_albums.json')
     music_albums << music_album
-    save_data(@music_albums, 'data/music_albums.json')
+    save_data(music_albums, 'data/music_albums.json')
     puts 'Music album added successfully'
   end
 
   def add_movie
     silet = get_user_input_str('Is this movie silet? [Y/N]')
+    silet.upcase == 'Y' ? silet = true : silet = false
     publish_date = get_user_input_str('Enter the publish date')
     source = get_user_input_str('Enter the source')
     movie = Movie.new(nil, publish_date, nil, silet, source)
@@ -185,7 +187,7 @@ class App
     publish_date = get_user_input_str('Enter the publish date')
     multiplayer = get_user_input_str('Is this game multiplayer? [Y/N]')
     last_played_at = get_user_input_str('Enter the last time you played this game')
-    game = Game.new(nil, publish_date, nil, multiplayer, last_played_at, author)
+    game = Game.new(nil, publish_date, nil, multiplayer, last_played_at)
     game_item = game
     author.add_item(game_item)
     authors = load_data('./data/authors.json')

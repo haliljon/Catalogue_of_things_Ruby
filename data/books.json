@@ -1,27 +1,9 @@
 [
   {
-    "publish_date": "2012-05-36",
-    "publisher": "gdfg",
+    "id": 159,
+    "publish_date": "1998-02-19",
+    "archived": false,
+    "publisher": "Karni",
     "cover_state": "good"
-  },
-  {
-    "publish_date": "2022-12-03",
-    "publisher": "NY times",
-    "cover_state": "bad"
-  },
-  {
-    "publish_date": "2022-04-29",
-    "publisher": "SF times",
-    "cover_state": "good"
-  },
-  {
-    "publish_date": "2017-05-13",
-    "publisher": "Sf times",
-    "cover_state": "good"
-  },
-  {
-    "publish_date": "2022-12-05",
-    "publisher": "dasd",
-    "cover_state": "bad"
   }
 ]
