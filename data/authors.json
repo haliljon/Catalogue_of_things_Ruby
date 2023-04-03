@@ -1,0 +1,15 @@
+[
+  {
+    "id": 555,
+    "first_name": "Super",
+    "last_name": "Mario",
+    "items": [
+      {
+        "publish_date": "1997-05-23",
+        "archived": null,
+        "multiplayer": "y",
+        "last_played_at": "2010-09-12"
+      }
+    ]
+  }
+]
