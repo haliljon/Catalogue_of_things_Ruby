@@ -1,0 +1,14 @@
+[
+  {
+    "publish_date": "2015-06-29",
+    "archived": true,
+    "silet": "y",
+    "source": "newspaper"
+  },
+  {
+    "publish_date": "1998-05-23",
+    "archived": false,
+    "silet": "n",
+    "source": "TV"
+  }
+]
