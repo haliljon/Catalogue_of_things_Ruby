@@ -88,7 +88,7 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone https://github.com/haliljon/Catalogue_of_things_Ruby.git
 
-  cd OOP-school-library
+  cd Catalogue_of_things_Ruby
 
   bundle install
 
